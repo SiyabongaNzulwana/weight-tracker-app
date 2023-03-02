@@ -67,7 +67,7 @@ export const Home = () => {
         <h2>
           {' '}
           Welcome {currentUser.data.firstName}{' '}
-          <h6 className='small-text'>Add your weight details here...</h6>
+          <p className='small-text'>Add your weight details here...</p>
         </h2>
       )}
       <form onSubmit={handleSubmit} className='sign-form'>
