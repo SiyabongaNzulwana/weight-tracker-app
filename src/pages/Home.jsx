@@ -50,7 +50,6 @@ export const Home = () => {
       )
 
       const data = await response.json()
-      console.log('data::: ', data)
       setWeightDate('')
       setWeight(0)
       setSubmmited(true)

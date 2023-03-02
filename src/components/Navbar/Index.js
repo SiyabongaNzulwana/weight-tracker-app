@@ -1,16 +1,9 @@
-import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavElements'
 import Image from './../../logo.svg'
 
 export const NavBar = () => {
   const location = useLocation()
-  const [currentUser, setCurrentUser] = useState({})
-
-  useEffect(() => {
-    const user = localStorage.getItem('user')
-    setCurrentUser(JSON.parse(user))
-  }, [])
 
   return (
     <>
@@ -31,13 +24,6 @@ export const NavBar = () => {
           ) : (
             <NavBtnLink to='/logout'> Sign Out</NavBtnLink>
           )}
-
-          {/* 
-          {currentUser ? (
-            <NavBtnLink to='/logout'> Sign Out</NavBtnLink>
-          ) : (
-            <NavBtnLink to='/login'> Sign In</NavBtnLink>
-          )} */}
         </NavBtn>
       </Nav>
     </>

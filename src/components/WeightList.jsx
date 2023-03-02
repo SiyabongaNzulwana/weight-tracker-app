@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 
 export const WeightList = ({ weights }) => {
-  console.log('weightsNNNN::: ', weights)
   const [currentUser, setCurrentUser] = useState()
-  const [weightData, setWeightData] = useState(weights)
   useEffect(() => {
     const data = localStorage.getItem('user')
     const user = JSON.parse(data)
@@ -21,17 +19,6 @@ export const WeightList = ({ weights }) => {
         'x-auth-token': token
       }
     })
-
-    let response = await fetch(
-      `http://localhost:3001/api/users/get_weight_history/${email}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-auth-token': token
-        }
-      }
-    )
   }
 
   return (
