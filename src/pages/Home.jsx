@@ -63,7 +63,13 @@ export const Home = () => {
 
   return (
     <div>
-      {currentUser && <h2> Welcome {currentUser.data.firstName}</h2>}
+      {currentUser && (
+        <h2>
+          {' '}
+          Welcome {currentUser.data.firstName}{' '}
+          <h6 className='small-text'>Add your weight details here...</h6>
+        </h2>
+      )}
       <form onSubmit={handleSubmit} className='sign-form'>
         <Label htmlFor='date'>Select Date</Label>
         <Input

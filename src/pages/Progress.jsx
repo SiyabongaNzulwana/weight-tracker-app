@@ -30,7 +30,7 @@ export const Progress = () => {
 
   return (
     <div>
-      {!weightData ? (
+      {!weightData || !weightData.length ? (
         <div>Loading...</div>
       ) : (
         <WeightList weights={weightData} />

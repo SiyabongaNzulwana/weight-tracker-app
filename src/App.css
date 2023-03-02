@@ -12,6 +12,14 @@
 .auth-form-container, .sign-form, .signup-form, .link-btn {
   display: flex;
   flex-direction: column;
+  width: 400px;
+}
+
+.radio-group {
+  display: inline;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 label {
@@ -54,9 +62,8 @@ button {
 .delete-btn {
   padding: 4px;
 }
-/* 
-.link-btn {
-  background: none;
-  color: white;
-  text-decoration: underline;
-} */
+.small-text {
+  color: red;
+  font-size: 15px;
+}
+

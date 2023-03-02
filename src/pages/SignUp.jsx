@@ -40,6 +40,7 @@ export const SignUp = (props) => {
     setUser(data)
     updateUser(data)
     localStorage.removeItem('user')
+
     navigate('/login', { replace: true })
     return data
   }
