@@ -11,7 +11,7 @@ export const WeightList = ({ weights }) => {
 
   useEffect(() => {
     setWeightsData(weights)
-  }, [])
+  }, [weights])
 
   const handleClick = async (id) => {
     const { token } = currentUser.data
