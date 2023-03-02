@@ -39,6 +39,7 @@ export const SignUp = (props) => {
     const data = await response.json()
     setUser(data)
     updateUser(data)
+    localStorage.removeItem('user')
     navigate('/login', { replace: true })
     return data
   }
